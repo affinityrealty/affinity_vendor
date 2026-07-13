@@ -74,8 +74,10 @@ export default function AppShell({
   return (
     <div className="app">
       <header className="d-header">
-        {/* eslint-disable-next-line @next/next/no-img-element -- fixed-height header logo, next/image sizing would distort it */}
-        <img src="/logo.jpg" className="d-logo" alt="Affinity Realty" />
+        <Link href="/" style={{ display: 'flex', alignItems: 'center' }}>
+          {/* eslint-disable-next-line @next/next/no-img-element -- fixed-height header logo, next/image sizing would distort it */}
+          <img src="/logo.png" className="d-logo" alt="Affinity Realty" />
+        </Link>
         <div className="d-sep" />
         <div>
           <div className="d-title">Vendor Directory</div>
