@@ -1,5 +1,20 @@
 import type { Metadata, Viewport } from "next";
+import { EB_Garamond, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
+
+const ebGaramond = EB_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-serif",
+  display: "swap",
+});
+
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Affinity Realty — Vendors",
@@ -19,14 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        {/* eslint-disable-next-line @next/next/no-page-custom-font -- App Router root layout is the correct place for this, the rule predates App Router */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Source+Sans+3:wght@300;400;500;600&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" className={`${ebGaramond.variable} ${sourceSans.variable}`}>
       <body>{children}</body>
     </html>
   );

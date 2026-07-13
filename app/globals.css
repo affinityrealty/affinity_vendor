@@ -49,8 +49,8 @@
   --border-2:var(--line-2);
   --red-legacy:var(--red);
 
-  --serif:'EB Garamond',Georgia,serif;
-  --sans:'Source Sans 3',system-ui,sans-serif;
+  --serif:var(--font-serif),Georgia,serif;
+  --sans:var(--font-sans),system-ui,sans-serif;
 
   --focus-ring:0 0 0 3px rgba(143,177,153,.30);
 
